@@ -35,31 +35,76 @@ botao.addEventListener("click", function(evento) {
 	var categoria = form.categoria.value;
 	var data = form.data.value;
 	var valor = parseFloat(form.valor.value);
-	var erros = document.querySelector(".erros");
-	erros.style.whiteSpace = "pre"; // Necessario para utilizar o \n na string
-
-	limparErros(erros);
+	var msgErros = document.querySelector(".erros");
+	var erros = [];
+	
+	//erros.style.whiteSpace = "pre"; // Necessario para utilizar o \n na string
 
 	if (descricao.length <= 0) {
-		erros.textContent += "A descrição é obrigatória.\n";
+		erros.push("A descrição é obrigatória.");
 	} //else { erros.textContent = (descricao + "\n"); }
 
 	if (categoria.length <= 0) {
-		erros.textContent += "A categoria é obrigatória.\n";
+		erros.push("A categoria é obrigatória.");
 	}
 
 	if (data.length <= 0) {
-		erros.textContent += "A data é obrigatória.\n";
+		erros.push("A data é obrigatória.");
 	}
 
 	if (isNaN(valor)) {
-		erros.textContent += "O valor é obrigatório.\n";
+		erros.push("O valor é obrigatório.");
 	} else {
 		if(valor == 0) {
-			erros.textContent += "O valor deve ser diferente de zero (0).\n";
+			erros.push("O valor deve ser diferente de zero (0).");
 		}	
 	}
+	if (erros.length > 0 ){
+		limparErros(msgErros);
+		//for(var erro = 0; erro < erros.length; erro++){
+		erros.forEach(function(erro){
+			var li = document.createElement("li");
+			li.textContent = erros[erro];
+			msgErros.appendChild(li);
+		});
+	} else {
+		var tabela = document.querySelector("#tabela-receitas");
+		// Criando a tr para o saldo
+		var tr = document.createElement("tr");
+		// Criandos as td's que armazenam os dados do saldo
+		var tdDescricao = document.createElement("td");
+		var tdCategoria = document.createElement("td");
+		var tdData = document.createElement("td");
+		var tdValor = document.createElement("td");
+		var tdSaldo = document.createElement("td");
+		// Atribuindo os valores na propriedade textContent
+		tdDescricao.textContent = descricao;
+		tdCategoria.textContent = categoria;
+		tdData.textContent = data;
+		tdValor.textContent = valor;
+		
+		var receitas = document.querySelectorAll(".receita");
+		var saldoAnterior = parseFloat(receitas[receitas.length - 1].querySelector(".info-saldo"));
+		var saldo = saldoAnterior + valor;
+		tdSaldo.textContent = saldo;
 
+		if (saldo < 0) {
+			tdSaldo.classList.add("receita-negativa");
+		}
+		console.log(valor);
+
+		//tdSaldo.textContent = (tdSaldo).toFixed(2);
+		// Inserindo os td’s na tr
+		trSaldo.appendChild(tdDescricao);
+		trSaldo.appendChild(tdCategoria);
+		trSaldo.appendChild(tdData);
+		trSaldo.appendChild(tdValor);
+		trSaldo.appendChild(tdSaldo);
+		
+		//var tabelaSaldo = document.querySelector("#tabela-receitas");
+		//tabelaSaldo.appendChild(trSaldo);
+	}
+	limparErros(erros);
 	formulario.reset();
 
 });
