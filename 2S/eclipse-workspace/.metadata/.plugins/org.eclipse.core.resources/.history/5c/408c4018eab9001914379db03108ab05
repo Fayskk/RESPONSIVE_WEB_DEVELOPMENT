@@ -17,7 +17,9 @@ public class Ex02 extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
-
+		
+		String nome = req.getParameter("nome");
+		String descricao = req.getParameter("descicao");
 		
 		
 		PrintWriter out = resp.getWriter();

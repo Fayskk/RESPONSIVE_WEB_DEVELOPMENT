@@ -18,8 +18,6 @@ public class PotatoServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
 		
-		String palavra = req.getParameter("palavra");
-		
 		PrintWriter out = resp.getWriter();
 		out.println("<html><body>");
 		out.println("<h1>POTATO</h1>");

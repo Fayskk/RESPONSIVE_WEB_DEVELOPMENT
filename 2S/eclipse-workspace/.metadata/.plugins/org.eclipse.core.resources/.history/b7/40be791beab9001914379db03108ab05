@@ -9,22 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/ex02")
-public class Ex02 extends HttpServlet{
-
-	private static final long serialVersionUID = 6416969764800258236L;
-
+@WebServlet(urlPatterns = "/potato")
+public class PotatoServlet extends HttpServlet{
+	
+	private static final long serialVersionUID = 2129182049581199200L;
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
-
 		
+		String palavra = req.getParameter("palavra");
 		
 		PrintWriter out = resp.getWriter();
 		out.println("<html><body>");
-		out.println("<h1>Seu nome</h1>");
-		out.println("<h3>" + req.getParameter("nome") + "</h3>");
-		out.println("<p>" + req.getParameter("descricao") + "</p>");
+		out.println("<h1>POTATO</h1>");
+		out.println("<h2>A palavra digitada foi: " + req.getParameter("palavra") + "</h2>");
 		out.println("</body></html>");
 		out.flush();
 		out.close();
