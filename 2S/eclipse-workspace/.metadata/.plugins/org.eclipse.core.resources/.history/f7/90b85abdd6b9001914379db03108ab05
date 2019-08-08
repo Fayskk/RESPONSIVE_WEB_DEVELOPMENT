@@ -1,0 +1,9 @@
+package br.com.fiap.javaweb.web;
+
+import javax.servlet.http.HttpServlet;
+
+public class PotatoServlet extends HttpServlet{
+	
+	private static final long serialVersionUID = 2129182049581199200L;
+
+}

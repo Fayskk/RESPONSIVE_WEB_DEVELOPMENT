@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="">
+		<form method="GET" action="potato">
+			<input type="text" name="palavra" placeholder="Digita ae">
+			<button>Enviar</button>
+		</form>
+	</div>
+</body>
+</html>

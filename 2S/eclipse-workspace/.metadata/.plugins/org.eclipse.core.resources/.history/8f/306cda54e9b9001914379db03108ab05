@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Javaweb</title>
+</head>
+<body>
+	<div class="ex01">
+		<form action="potato" method="get">
+			<input type="text" name="palavra" placeholder="Digita ae">
+			<button>Enviar</button>
+		</form>
+	</div>
+	<div class="ex02">
+		<form action="ex02" method="get">
+			<input type="text" name="nome" placeholder="Nome">
+			<input type="text" name="descricao">
+			<button>Nome</button>
+		</form> 
+	</div>
+	<div class="ex03">
+		<form action="ex03" method="get">>
+			<button>Que dia é hoje?</button>
+		</form> 
+	</div>
+</body>
+</html>
