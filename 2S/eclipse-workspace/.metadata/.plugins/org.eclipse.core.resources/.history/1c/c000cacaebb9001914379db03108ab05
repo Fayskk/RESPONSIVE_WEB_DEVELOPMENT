@@ -20,15 +20,6 @@ public class Ex03 extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
 		
-		//String data = req.getParameter("data");
-		//Date agora;
-		//try {
-		//	agora = data == null ? new Date() : df.parse();
-		// } catch (ParseException e) {
-		// 		e.printStackTrace();
-		//}
-		
-		
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		
 		Date date = new Date();  
