@@ -1,0 +1,20 @@
+package br.com.fiap.hotel.DAO;
+
+import java.util.ArrayList;
+
+import br.com.fiap.hotel.model.entities.Reserva;
+
+public class ReservaDAO {
+	
+	private ArrayList<Reserva> reservas = new ArrayList<>();
+	
+	public void adicionar(Reserva r) {
+		
+		if (r != null) reservas.add(r);
+	}
+	
+	public ArrayList<Reserva> consultaTodasReservas() {
+		return this.reservas;
+	}
+
+}

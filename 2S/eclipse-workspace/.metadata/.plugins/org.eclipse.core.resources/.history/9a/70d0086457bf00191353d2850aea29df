@@ -1,0 +1,11 @@
+package br.com.fiap.hotel.web;
+
+import javax.servlet.http.HttpServlet;
+
+public class ReservaServlet extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+}

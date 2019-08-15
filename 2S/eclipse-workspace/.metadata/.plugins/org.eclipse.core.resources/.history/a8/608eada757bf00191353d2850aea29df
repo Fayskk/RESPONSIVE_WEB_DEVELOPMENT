@@ -1,0 +1,13 @@
+package br.com.fiap.hotel.web;
+
+import javax.servlet.http.HttpServlet;
+
+public class ReservaServlet extends HttpServlet{
+	
+	private static final long serialVersionUID = 7063023848259539290L;
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+}

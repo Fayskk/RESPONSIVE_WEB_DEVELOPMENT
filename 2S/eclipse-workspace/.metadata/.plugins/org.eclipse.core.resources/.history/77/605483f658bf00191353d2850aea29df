@@ -1,0 +1,20 @@
+package br.com.fiap.hotel.web;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class ReservaServlet extends HttpServlet{
+	
+	private static final long serialVersionUID = 7063023848259539290L;
+	
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		long quarto = Long.parseLong(req.getParameter("quarto"));
+		Date checkin = req.getParameter("checkin");
+		Date checkout = req.getParameter("checkout");
+	}
+}
