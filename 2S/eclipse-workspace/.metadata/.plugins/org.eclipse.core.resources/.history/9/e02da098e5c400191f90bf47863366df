@@ -45,7 +45,7 @@ public class ReservaServlet extends HttpServlet {
 			out.println("<h2>Consultar de Reservas</h2>");
 			out.println("<table border=\"1\">");
 			out.println("<tr><td>Nro Quarto</td><td>Data de Entrada</td><td>Data de Saída</td></tr>");
-			ArrayList<Reserva> reservas = new ReservaDAO().consultaTodasReservas();
+			ArrayList<Reserva> reservas = new ReservaDAO().consultarTodasReservas();
 			for (Reserva r : reservas) {
 				out.println("<tr><td>" + r.getNroQuarto() + "</td>" + "<td>" + sdf.format(r.getCheckin()) + "</td><td>"
 						+ sdf.format(r.getCheckout()) + "</td></tr>");
