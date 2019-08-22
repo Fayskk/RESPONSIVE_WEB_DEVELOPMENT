@@ -1,0 +1,8 @@
+package br.com.fiap.hotel.model.entities;
+
+public class Usuario {
+	String nome;
+	String login;
+	String senha;
+
+}

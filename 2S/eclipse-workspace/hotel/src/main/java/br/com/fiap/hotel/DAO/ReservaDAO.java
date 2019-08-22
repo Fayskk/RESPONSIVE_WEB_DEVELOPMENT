@@ -1,4 +1,4 @@
-package br.com.fiap.hotel.DAO;
+package br.com.fiap.hotel.dao;
 
 import java.util.ArrayList;
 

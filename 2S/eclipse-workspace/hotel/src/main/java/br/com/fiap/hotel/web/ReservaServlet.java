@@ -10,8 +10,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import br.com.fiap.hotel.DAO.ReservaDAO;
+
 import br.com.fiap.hotel.business.ReservaBO;
+import br.com.fiap.hotel.dao.ReservaDAO;
 import br.com.fiap.hotel.model.entities.Reserva;
 
 @WebServlet(urlPatterns = "/reservar")
