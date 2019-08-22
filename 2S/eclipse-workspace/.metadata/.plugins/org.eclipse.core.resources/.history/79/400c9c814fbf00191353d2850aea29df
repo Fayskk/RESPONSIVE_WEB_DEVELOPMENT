@@ -1,5 +1,0 @@
-package br.com.fiap.hotel.model.entities;
-
-public class Reserva {
-
-}
